@@ -66,11 +66,11 @@ func NewH264Encoder(
 	m.Pixfmt = pixfmt
 	switch pixfmt {
 	case image.YCbCrSubsampleRatio444:
-		m.m.pixfmt = C.PIX_FMT_YUV444P
+		m.m.pixfmt = C.AV_PIX_FMT_YUV444P
 	case image.YCbCrSubsampleRatio422:
-		m.m.pixfmt = C.PIX_FMT_YUV422P
+		m.m.pixfmt = C.AV_PIX_FMT_YUV422P
 	case image.YCbCrSubsampleRatio420:
-		m.m.pixfmt = C.PIX_FMT_YUV420P
+		m.m.pixfmt = C.AV_PIX_FMT_YUV420P
 	}
 	for _, opt := range opts {
 		a := strings.Split(opt, ",")
