@@ -16,7 +16,7 @@ import (
 	} aacdec_t ;
 
 	static int aacdec_new(aacdec_t *m, uint8_t *buf, int len) {
-		m->c = avcodec_find_decoder(CODEC_ID_AAC);
+		m->c = avcodec_find_decoder(AV_CODEC_ID_AAC);
 		m->ctx = avcodec_alloc_context3(m->c);
 		m->f = avcodec_alloc_frame();
 		m->ctx->extradata = buf;
