@@ -26,7 +26,7 @@ import (
 	} h264enc_t;
 
 	static int h264enc_new(h264enc_t *m) {
-		m->c = avcodec_find_encoder(CODEC_ID_H264);
+		m->c = avcodec_find_encoder(AV_CODEC_ID_H264);
 		m->ctx = avcodec_alloc_context3(m->c);
 		m->ctx->width = m->w;
 		m->ctx->height = m->h;
