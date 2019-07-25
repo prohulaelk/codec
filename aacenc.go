@@ -18,7 +18,7 @@ import (
 	} aacenc_t ;
 
 	static int aacenc_new(aacenc_t *m) {
-		m->c = avcodec_find_encoder(CODEC_ID_AAC);
+		m->c = avcodec_find_encoder(AV_CODEC_ID_AAC);
 		m->ctx = avcodec_alloc_context3(m->c);
 		m->ctx->sample_fmt = AV_SAMPLE_FMT_FLTP;
 		m->ctx->sample_rate = m->samplerate;
